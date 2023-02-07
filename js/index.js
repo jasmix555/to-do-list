@@ -10,6 +10,7 @@ document.querySelector("#btn").onclick = function (event) {
         alert("please insert text");
     } else {
         addText()
+        document.getElementById('text').value = "";
     }
 }
 
@@ -17,8 +18,15 @@ txtarea.addEventListener("keypress", function (event) {
     if (event.code === "Enter" && !txtarea.value == "") {
         event.preventDefault();
         addText();
+        document.getElementById('text').value = "";
+        
+    }
+    else if(txtarea.value == 0){
+        alert("please insert text");
     }
 })
+
+
 
 function addText() {
     document.querySelector('#list').innerHTML += `
