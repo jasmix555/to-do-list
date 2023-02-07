@@ -19,7 +19,6 @@ txtarea.addEventListener("keypress", function (event) {
         event.preventDefault();
         addText();
         document.getElementById('text').value = "";
-        
     }
     else if(txtarea.value == 0){
         alert("please insert text");
@@ -38,6 +37,9 @@ function addText() {
     </li>
     `;
 }
+
+
+
 // let rmv = document.querySelectorAll(".rmv")
 
 // for (let i = 0; i < rmv.length; i++) {
