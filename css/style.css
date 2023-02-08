@@ -8,7 +8,7 @@
 
 body {
   align-items: center;
-  background: linear-gradient(to top right, #54d880, #12ac0f);
+  background: linear-gradient(to bottom, #60eb8e, #228255);
   width: 100%;
   height: 100vh;
 }
@@ -51,11 +51,7 @@ body {
 }
 .container form #btn:hover {
   background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #fff317, #db8534);
   text-decoration: none;
   cursor: pointer;
 }
@@ -64,7 +60,7 @@ body {
 }
 .container #table #list {
   margin: 0 auto;
-  width: 100%;
+  width: 60%;
   height: auto;
   border: solid 1px #fff;
   text-align: center;
