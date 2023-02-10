@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  top: 100px;
+  top: 90px;
   overflow: hidden;
 }
 .container h1 {
@@ -90,7 +90,7 @@ body {
 .container #table #list {
   margin: 0 auto;
   width: 60%;
-  height: 530px;
+  height: 500px;
   border: solid 1px #fff;
   overflow-y: scroll;
   padding: 0 20px;
@@ -163,6 +163,24 @@ body {
 }
 .container #table #list li .btnX:hover {
   background: linear-gradient(to bottom #db8534, #fff317);
+}
+.container footer {
+  color: #f1f1f1;
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    border: solid 1px tomato;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .container #table {
+    width: 100%;
+  }
+  .container #table #list {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
