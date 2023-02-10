@@ -41,8 +41,8 @@ function addText() {
     //a button that is able to erase the li element
     document.querySelector('#list').innerHTML += `
     <li>
-    <input type="checkbox">${document.querySelector('#text').value}
-    </input>
+    <input type="checkbox"></input>
+    <textarea rows="1" cols="33">${document.querySelector('#text').value}</textarea>
     <a href="#" class="btnX" onclick="var li = this.parentNode; var ul = li.parentNode; ul.removeChild(li);">X
     </a>
     </li>
