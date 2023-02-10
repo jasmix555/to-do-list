@@ -3,8 +3,7 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 body {
@@ -24,6 +23,11 @@ body {
     position: relative;
     top: 100px;
     overflow: hidden;
+
+    h1 {
+        margin-right: 10px;
+        font-size: 40px;
+    }
 
     form {
         input {
@@ -48,22 +52,42 @@ body {
         }
 
         #btn {
-            -webkit-border-radius: 6;
-            -moz-border-radius: 6;
-            border-radius: 6px;
+            min-width: 80px;
+            height: 40px;
             color: #fff;
-            font-size: 16px;
-            padding: 5px 15px 5px 15px;
-            border: solid #fff 2px;
-            text-decoration: none;
-            background: none;
-        }
-
-        #btn:hover {
-            background: #3cb0fd;
-            background-image: linear-gradient(to bottom, #fff317, #db8534);
-            text-decoration: none;
+            padding: 5px 10px;
+            font-weight: bold;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 8px;
+            z-index: 0;
+            background: none;
+            overflow: hidden;
+            border: 3px solid #f1f1f1;
+            color: #f1f1f1;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                transition: all 0.2s ease-in-out;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background: #495057;
+            }
         }
     }
 
@@ -73,27 +97,29 @@ body {
 
     #table {
         overflow: hidden;
+
         #list {
             margin: 0 auto;
             width: 60%;
-            height: 500px;
+            height: 530px;
             border: solid 1px #fff;
             overflow-y: scroll;
-            
+            padding: 0 20px;
+
 
             li {
                 padding: 15px;
                 font-size: 20px;
                 color: #fff;
+                border-bottom: 1px solid #f1f1f1;
             }
-
-            text-align: center;
 
             input[type=checkbox] {
                 position: relative;
                 cursor: pointer;
-                right: 20px;
-                bottom: 3px;
+                top: 5px;
+                float: left;
+
                 &:before {
                     content: "";
                     display: block;
@@ -113,7 +139,7 @@ body {
                     height: 20px;
                     top: 0;
                     left: 0;
-                    background-color: #1E80EF;
+                    background-color: #0f0f0f;
                 }
 
                 &:checked:after {
@@ -121,7 +147,7 @@ body {
                     display: block;
                     width: 5px;
                     height: 10px;
-                    border: solid white;
+                    border: solid rgb(238, 233, 233);
                     border-width: 0 2px 2px 0;
                     -webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
@@ -138,6 +164,12 @@ body {
                 border-radius: 5px;
                 font-size: 14px;
                 color: #fff;
+                float: right;
+                display: block;
+
+                &:hover {
+                    background: linear-gradient(to bottom #db8534, #fff317);
+                }
             }
         }
     }
