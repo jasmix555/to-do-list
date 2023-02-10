@@ -42,7 +42,7 @@ function addText() {
     document.querySelector('#list').innerHTML += `
     <li>
     <input type="checkbox"></input>
-    <textarea rows="1" cols="33">${document.querySelector('#text').value}</textarea>
+    <textarea rows="1" cols="10">${document.querySelector('#text').value}</textarea>
     <a href="#" class="btnX" onclick="var li = this.parentNode; var ul = li.parentNode; ul.removeChild(li);">X
     </a>
     </li>
