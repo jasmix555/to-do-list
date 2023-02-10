@@ -28,45 +28,23 @@ txtarea.addEventListener("keypress", function (event) {
         //after taking the value, erase the past value so that is looks clean
         document.getElementById('text').value = "";
     }
-    else if (txtarea.value == 0) {
+    else if (event.code === "Enter" && txtarea.value == "") {
         //when there is no text inputted, alert that there needs to be a text
         alert("please insert text");
+        event.preventDefault();
     }
 })
 
 
 //making a function where the value taken can be placed into the html as a new innerHTML element
 function addText() {
+    //a button that is able to erase the li element
     document.querySelector('#list').innerHTML += `
     <li>
     <input type="checkbox">${document.querySelector('#text').value}
     </input>
-    //a button that is able to erase the li element
     <a href="#" class="btnX" onclick="var li = this.parentNode; var ul = li.parentNode; ul.removeChild(li);">X
     </a>
     </li>
     `;
 }
-
-
-
-// let rmv = document.querySelectorAll(".rmv")
-
-// for (let i = 0; i < rmv.length; i++) {
-//     rmv[i].addEventListener("click", function (event) {
-//         console.log(i);
-//         let li = document.querySelectorAll("#list li")
-//         li[i].remove();
-//         console.log(event);
-//     })
-// }
-
-// else {
-//     //after sending it make it appear as a new checkbox
-//     document.querySelector('#list').innerHTML += `
-//             <li>
-//             <input type="checkbox">${document.querySelector('#text').value}
-//             </input>
-//             </li>
-//     `;
-// }
