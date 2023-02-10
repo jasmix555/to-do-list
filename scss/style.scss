@@ -9,32 +9,56 @@
 body {
     align-items: center;
     // background: linear-gradient(to top left, #7fcdef, #1f75d1);
-    background: linear-gradient(to bottom, #60eb8e, #228255);
+    animation: bggradient 20s ease infinite alternate;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+    @keyframes bggradient {
+        0% {
+            background: #746d69;
+        }
+    
+        20% {
+            background: #bfafa1;
+        }
+    
+        40% {
+            background: #9d8f7e;
+        }
+    
+        60% {
+            background: #b3aa98;
+        }
+    
+        80% {
+            background: #c8bb93;
+        }
+    
+        100% {
+            background: #a7a18f;
+        }
+    }
 }
 
 .container {
     padding: 20px;
     width: 70%;
-    height: 90%;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    top: 90px;
     overflow: hidden;
 
     h1 {
         font-size: 60px;
         padding-bottom: 20px;
-        background: linear-gradient(-70deg, #e2aa1d 5%, #cd0ef3 53%, #e53509 91%);
+        background: linear-gradient(-70deg, #61ffe7 5%, #b787ff 53%, #ff9d85 91%);
         color: #fff;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-stroke: 10px transparent;
         letter-spacing: 4px;
         cursor: default;
-        animation: ani 5s linear infinite;
+        animation: ani 8s ease infinite alternate;
         background-size: 200%;
 
         @keyframes ani {
@@ -126,8 +150,8 @@ body {
         #list {
             margin: 0 auto;
             width: 60%;
-            height: 500px;
-            border: solid 1px #fff;
+            height: 28rem;
+            border: solid 3px #fff;
             overflow-y: scroll;
             padding: 0 20px;
 
@@ -219,7 +243,6 @@ body {
 
 @media only screen and (max-width:400px) {
     .container {
-        border: solid 1px tomato;
         width: 100%;
         height: 100%;
         top: 0;
@@ -233,6 +256,7 @@ body {
 
             #list {
                 width: 100%;
+                height: 25rem;
             }
         }
     }
