@@ -8,33 +8,12 @@
 
 body {
   align-items: center;
-  animation: bggradient 20s ease infinite alternate;
+  background: linear-gradient(to bottom, #7fcdef, #1f75d1);
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-@keyframes bggradient {
-  0% {
-    background: #746d69;
-  }
-  20% {
-    background: #bfafa1;
-  }
-  40% {
-    background: #9d8f7e;
-  }
-  60% {
-    background: #b3aa98;
-  }
-  80% {
-    background: #c8bb93;
-  }
-  100% {
-    background: #a7a18f;
-  }
-}
-
-.container {
+body .container {
   padding: 20px;
   width: 70%;
   margin: 0 auto;
@@ -42,17 +21,17 @@ body {
   position: relative;
   overflow: hidden;
 }
-.container h1 {
+body .container h1 {
+  cursor: default;
   font-size: 60px;
   padding-bottom: 20px;
-  background: linear-gradient(-70deg, #61ffe7 5%, #b787ff 53%, #ff9d85 91%);
   color: #fff;
+  background: linear-gradient(to left, #7fcdef 0%, #87ffcf 50%, #8597ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 10px transparent;
   letter-spacing: 4px;
-  cursor: default;
-  animation: ani 8s ease infinite alternate;
+  animation: ani 5s ease infinite alternate;
   background-size: 200%;
 }
 @keyframes ani {
@@ -66,7 +45,7 @@ body {
     background-position: 0 0;
   }
 }
-.container form input {
+body .container form input {
   width: 40%;
   height: 40px;
   border-bottom: 2px solid #fff;
@@ -77,15 +56,15 @@ body {
   appearance: none;
   text-align: center;
 }
-.container form input::placeholder {
+body .container form input::placeholder {
   color: #fff;
   font-size: 18px;
   text-align: center;
 }
-.container form input:focus {
+body .container form input:focus {
   outline: none;
 }
-.container form #btn {
+body .container form #btn {
   min-width: 80px;
   height: 40px;
   color: #fff;
@@ -103,13 +82,13 @@ body {
   border: 3px solid #f1f1f1;
   color: #f1f1f1;
 }
-.container form #btn:hover {
+body .container form #btn:hover {
   color: #fff;
 }
-.container form #btn:hover:after {
+body .container form #btn:hover:after {
   width: 100%;
 }
-.container form #btn:after {
+body .container form #btn:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -120,13 +99,13 @@ body {
   height: 100%;
   background: #495057;
 }
-.container h2 {
+body .container h2 {
   padding: 20px;
 }
-.container #table {
+body .container #table {
   overflow: hidden;
 }
-.container #table #list {
+body .container #table #list {
   margin: 0 auto;
   width: 60%;
   height: 28rem;
@@ -134,7 +113,7 @@ body {
   overflow-y: scroll;
   padding: 0 20px;
 }
-.container #table #list li {
+body .container #table #list li {
   padding: 15px;
   font-size: 20px;
   color: #fff;
@@ -143,13 +122,13 @@ body {
   width: 100%;
   text-align: left;
 }
-.container #table #list li input[type=checkbox] {
+body .container #table #list li input[type=checkbox] {
   position: relative;
   cursor: pointer;
   top: 5px;
   float: left;
 }
-.container #table #list li input[type=checkbox]:before {
+body .container #table #list li input[type=checkbox]:before {
   content: "";
   display: block;
   position: absolute;
@@ -159,7 +138,7 @@ body {
   left: 0;
   background-color: #e9e9e9;
 }
-.container #table #list li input[type=checkbox]:checked:before {
+body .container #table #list li input[type=checkbox]:checked:before {
   content: "";
   display: block;
   position: absolute;
@@ -169,7 +148,7 @@ body {
   left: 0;
   background-color: #0f0f0f;
 }
-.container #table #list li input[type=checkbox]:checked:after {
+body .container #table #list li input[type=checkbox]:checked:after {
   content: "";
   display: block;
   width: 5px;
@@ -183,7 +162,7 @@ body {
   top: 3px;
   left: 7px;
 }
-.container #table #list li textarea {
+body .container #table #list li textarea {
   width: 80%;
   margin-left: 15px;
   border-style: none;
@@ -191,7 +170,7 @@ body {
   overflow: auto;
   outline: none;
 }
-.container #table #list li .btnX {
+body .container #table #list li .btnX {
   border: solid 1px #fff;
   padding: 5px;
   border-radius: 5px;
@@ -200,26 +179,25 @@ body {
   float: right;
   display: block;
 }
-.container #table #list li .btnX:hover {
+body .container #table #list li .btnX:hover {
   background: linear-gradient(to bottom #db8534, #fff317);
 }
-.container footer {
+body .container footer {
   color: #f1f1f1;
 }
-
 @media only screen and (max-width: 400px) {
-  .container {
+  body .container {
     width: 100%;
     height: 100%;
     top: 0;
   }
-  .container h1 {
+  body .container h1 {
     font-size: 50px;
   }
-  .container #table {
+  body .container #table {
     width: 100%;
   }
-  .container #table #list {
+  body .container #table #list {
     width: 100%;
     height: 25rem;
   }
